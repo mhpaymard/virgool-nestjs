@@ -19,5 +19,10 @@ export enum ValidationMessage{
 }
 export enum PublicMessages{
     SendOtp="کد با موفقیت ارسال شد",
-    LoggedIn="با موفقیت وارد حساب کاربری شدید"
+    LoggedIn="با موفقیت وارد حساب کاربری شدید",
+    Created="با موفقیت ساخته شد"
+}
+export enum ConflictMessages{
+    CategoryTitle="عنوان دسته بندی تکراری می باشد",
+
 }

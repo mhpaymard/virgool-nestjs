@@ -1,10 +1,10 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Res, Req } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Res, Req, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { ApiConsumes, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiConsumes, ApiTags } from '@nestjs/swagger';
 import { AuthDto, CheckOtpDto } from './dto/auth.dto';
 import { SwaggerConsumes } from 'src/common/enums/swagger-consume.enum';
 import { Request, Response } from 'express';
-import { CookieKeys } from 'src/common/enums/cookie.enum';
+import { AuthGuard } from './guards/auth.guard';
 
 @Controller('auth')
 @ApiTags("Auth")
@@ -24,6 +24,8 @@ export class AuthController {
   }
 
   @Get("/check-login")
+  @ApiBearerAuth("Authorization")
+  @UseGuards(AuthGuard)
   checkLogin(@Req() req:Request){
     return req.user;
   }
