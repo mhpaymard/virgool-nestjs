@@ -24,5 +24,4 @@ export enum PublicMessages{
 }
 export enum ConflictMessages{
     CategoryTitle="عنوان دسته بندی تکراری می باشد",
-
 }
