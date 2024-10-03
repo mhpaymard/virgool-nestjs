@@ -12,15 +12,21 @@ export enum AuthMessage{
     LoginRequired="وارد حساب کاربری خود شوید"
 }
 export enum NotFoundMessage{
-
+    NotFound="موردی یافت نشد",
+    NotFoundCategory="دسته بندی یافت نشد",
+    NotFoundPost="مقاله یافت نشد",
+    NotFoundUser="کاربری یافت نشد"
 }
 export enum ValidationMessage{
-
+    InvalidImageFormat="فرمت تصویر باید jpg یا png باشد"
 }
 export enum PublicMessages{
     SendOtp="کد با موفقیت ارسال شد",
     LoggedIn="با موفقیت وارد حساب کاربری شدید",
-    Created="با موفقیت ساخته شد"
+    Created="با موفقیت ایجاد شد",
+    Deleted="با موفقیت حذف شد",
+    Updated="با موفقیت به روز رسانی شد",
+    Inserted="با موفقیت ایجاد شد"
 }
 export enum ConflictMessages{
     CategoryTitle="عنوان دسته بندی تکراری می باشد",

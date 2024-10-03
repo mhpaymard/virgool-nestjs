@@ -10,8 +10,8 @@ export class OtpEntity extends BaseEntity{
     @Column()
     expires_in:Date;
     @Column()
-    user_id:number;
+    userId:number;
     @OneToOne(()=>UserEntity,user=>user.otp,{onDelete:"CASCADE"})
-    @JoinColumn({name:"user_id"})
+    @JoinColumn({name:"userId"})
     user:UserEntity;
 }
